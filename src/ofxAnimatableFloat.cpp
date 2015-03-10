@@ -29,16 +29,20 @@ void ofxAnimatableFloat::animateTo( float newVal ){
 	ofxAnimatable::startAnimation();	
 }
 
+void ofxAnimatableFloat::animateTo( float newVal, float delay ){
+    
+    if (delay <= 0.0f){
+        animateTo(newVal);
+    }else{
+        //originalTempVal_ = val();
+        targetTempVal_ = newVal;
+        ofxAnimatable::startAnimationAfterDelay(delay);
+    }
+}
 
 void ofxAnimatableFloat::animateToAfterDelay( float newVal, float delay ){
 	
-	if (delay <= 0.0f){
-		animateTo(newVal);
-	}else{
-		//originalTempVal_ = val();
-		targetTempVal_ = newVal;
-		ofxAnimatable::startAnimationAfterDelay(delay);
-	}
+    this->animateTo( newVal, delay );
 }
 
 
@@ -69,6 +73,10 @@ void ofxAnimatableFloat::reset( float newVal ){
 
 	ofxAnimatable::reset();
 	originalVal_ = targetVal_ = newVal; 
+}
+
+void ofxAnimatableFloat::setFloat( float newVal ) {
+    ofxAnimatableFloat::reset( newVal );
 }
 
 

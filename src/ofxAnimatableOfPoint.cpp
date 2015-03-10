@@ -83,15 +83,20 @@ void ofxAnimatableOfPoint::animateTo( ofPoint where ){
 	ofxAnimatable::startAnimation();
 }
 
+void ofxAnimatableOfPoint::animateTo( ofPoint where, float delay ){
+    
+    if (delay <= 0.0f){
+        animateTo(where);
+    }else{
+        //originalTempPoint_ = getCurrentPosition();
+        targetTempPoint_ = where;
+        ofxAnimatable::startAnimationAfterDelay(delay);
+    }
+}
+
 void ofxAnimatableOfPoint::animateToAfterDelay( ofPoint where, float delay ){
 	
-	if (delay <= 0.0f){
-		animateTo(where);
-	}else{
-		//originalTempPoint_ = getCurrentPosition();
-		targetTempPoint_ = where;
-		ofxAnimatable::startAnimationAfterDelay(delay);
-	}
+    this->animateTo( where, delay );
 }
 
 

@@ -56,12 +56,16 @@ void ofxAnimatableOfColor::animateTo( ofColor col ){
 	ofxAnimatable::startAnimation();
 }
 
+void ofxAnimatableOfColor::animateTo( ofColor col, float delay ){
+    
+    //originalTempColor_ = getCurrentColor();
+    targetTempColor_ = col;
+    ofxAnimatable::startAnimationAfterDelay(delay);
+}
 
-void ofxAnimatableOfColor::animateToAfterDelay( ofColor newColor, float delay ){
-	
-	//originalTempColor_ = getCurrentColor();
-	targetTempColor_ = newColor;
-	ofxAnimatable::startAnimationAfterDelay(delay);
+void ofxAnimatableOfColor::animateToAfterDelay( ofColor col, float delay ){
+    
+    this->animateTo( col, delay );
 }
 
 

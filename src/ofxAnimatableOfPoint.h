@@ -36,7 +36,8 @@ class ofxAnimatableOfPoint : public ofxAnimatable{
 		// animated over time ///////////////////////////////////////////////////////////////////////////
 
 		///starts new animation to "where" regardless, using the current pos as the inital value
-		void animateTo( ofPoint where );
+        void animateTo( ofPoint where );
+        void animateTo( ofPoint where, float delay );
 		void animateToAfterDelay( ofPoint where, float delay );
 
 		void animateToIfFinished( ofPoint where );

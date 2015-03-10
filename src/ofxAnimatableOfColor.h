@@ -34,7 +34,8 @@ class ofxAnimatableOfColor : public ofxAnimatable {
 
 			///starts new fade to "col" regardless, using the current color as the inital value
 		void animateTo( ofColor col );
-		void animateToAfterDelay( ofColor newColor, float delay );
+        void animateTo( ofColor, float delay );
+		void animateToAfterDelay( ofColor col, float delay );
 		void animateToIfFinished( ofColor col );
 		void fadeIn();
 		void fadeOut();

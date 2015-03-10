@@ -936,6 +936,11 @@ void ofxAnimatable::setRepeatType( AnimRepeat repeat ){
 	repeat_ = repeat;
 }
 
+AnimRepeat ofxAnimatable::getRepeatType()
+{
+    return repeat_;
+}
+
 
 void ofxAnimatable::setCurve( AnimCurve curveStyle){
 	curveStyle_ = curveStyle;

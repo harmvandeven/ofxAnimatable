@@ -96,6 +96,7 @@ class ofxAnimatable{
 													//anim curve styles on the fly.
 													//just make sure the poitner remains valid!
 	
+        AnimRepeat getRepeatType();
 		void setRepeatType( AnimRepeat repeat );
 		void setRepeatTimes(int times); //you must set setRepeatType to PLAY_N_TIMES or LOOP_BACK_AND_FORTH_N_TIMES
 		void setDuration( float seconds );
