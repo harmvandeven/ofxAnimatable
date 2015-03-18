@@ -69,6 +69,24 @@ void ofxAnimatableOfPoint::setPositionZ( float newZ ){
 }
 
 
+void ofxAnimatableOfPoint::updateTarget( ofPoint newPos ){
+    targetPoint_ = newPos;
+}
+
+
+void ofxAnimatableOfPoint::updateTargetX( float newX ){
+    targetPoint_.x = newX;
+}
+
+void ofxAnimatableOfPoint::updateTargetY( float newY ){
+    targetPoint_.y = newY;
+}
+
+void ofxAnimatableOfPoint::updateTargetZ( float newZ ){
+    targetPoint_.z = newZ;
+}
+
+
 void ofxAnimatableOfPoint::reset(){
 
 	ofxAnimatable::reset();

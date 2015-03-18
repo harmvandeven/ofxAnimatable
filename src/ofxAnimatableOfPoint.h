@@ -31,6 +31,10 @@ class ofxAnimatableOfPoint : public ofxAnimatable{
 		void setPositionX(float);
 		void setPositionY(float);
 		void setPositionZ(float);
+        void updateTarget( ofPoint );
+        void updateTargetX(float);
+        void updateTargetY(float);
+        void updateTargetZ(float);
 		void reset();		
 	
 		// animated over time ///////////////////////////////////////////////////////////////////////////
